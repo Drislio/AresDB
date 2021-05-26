@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+      @apply bg-[#f4f5e2] text-purple-700;
+      
+    }
+}
