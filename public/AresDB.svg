@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="365" height="107" viewBox="0 0 365 107">
+  <defs>
+    <filter id="AresDB" x="0" y="0" width="365" height="107" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#AresDB)">
+    <text id="AresDB-2" data-name="AresDB" transform="translate(10 73)" fill="#404477" font-size="89" font-family="SitkaSmall-Bold, Sitka Small" font-weight="700"><tspan x="0" y="0">AresDB</tspan></text>
+  </g>
+</svg>
