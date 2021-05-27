@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header.js'
+import NavBar from "../components/NavBar.js"
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
       
       {/* Header */}
       <Header/>
+
+      {/* NavBar */}
+      <NavBar/>
       
     </div>
   )

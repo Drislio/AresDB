@@ -4,7 +4,7 @@
 
 @layer base{
     body{
-      @apply bg-[#f4f5e2] text-purple-700;
+      @apply bg-[#F5FFFA] text-purple-700;
       
     }
 }
