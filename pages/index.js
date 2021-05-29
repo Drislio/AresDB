@@ -1,8 +1,13 @@
 import Head from 'next/head'
+import { async } from 'regenerator-runtime'
+import { object } from 'webidl-conversions'
 import Header from '../components/Header.js'
 import NavBar from "../components/NavBar.js"
+import Results from "../components/Results.js"
+import requests from "../utils/requests.js"
 
-export default function Home() {
+export default function Home({ results }) {
+  console.log([results])
   return (
     <div>
       <Head>
@@ -16,7 +21,36 @@ export default function Home() {
 
       {/* NavBar */}
       <NavBar/>
+
+      {/* Results */}
+      <Results results={results}/>
       
     </div>
   )
+}
+
+// export async function getServerSideProps(contex){
+//   const genre = contex.query.genre;
+
+//   const request = await fetch(
+//     `https://api.themoviedb.org/3/${
+//        requests[genre]?.url || requests.fetchTrending.url
+//     }`
+//   )
+// }
+
+export async function getServerSideProps(contex){
+  const genre = contex.query.genre;
+
+  const request = await fetch(
+    `https://api.themoviedb.org/3${
+        requests[genre]?.url || requests.fetchTrending.url
+    }`
+    ).then((res) => res.json())
+    
+    return {
+      props: {
+        results: request.results,
+      },
+    }
 }
